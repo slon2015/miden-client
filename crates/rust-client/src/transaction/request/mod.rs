@@ -166,7 +166,7 @@ impl TransactionRequest {
 
     /// Converts the [`TransactionRequest`] into [`TransactionArgs`] in order to be executed by a
     /// Miden host.
-    pub(super) fn into_transaction_args(
+    pub(crate) fn into_transaction_args(
         self,
         tx_script: Option<TransactionScript>,
         foreign_account_inputs: Vec<AccountInputs>,

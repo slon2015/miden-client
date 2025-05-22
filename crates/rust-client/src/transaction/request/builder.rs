@@ -379,7 +379,7 @@ impl TransactionRequestBuilder {
         let script_template = match (
             self.custom_script,
             self.own_output_notes.is_empty(),
-            self.expected_output_notes.is_empty()
+            self.empty_script
         ) {
             (_, _, true) => Some(TransactionScriptTemplate::NoAuth),
             (Some(_), false, false) => {
